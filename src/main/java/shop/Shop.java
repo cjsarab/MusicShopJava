@@ -17,4 +17,36 @@ public class Shop {
         this.instrumentsInStock = instrumentsInStock;
         this.accessoriesInStock = accessoriesInStock;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getTill() {
+        return till;
+    }
+
+    public void setTill(double till) {
+        this.till = till;
+    }
+
+    public ArrayList<Instrument> getInstrumentsInStock() {
+        return instrumentsInStock;
+    }
+
+    public void setInstrumentsInStock(ArrayList<Instrument> instrumentsInStock) {
+        this.instrumentsInStock = instrumentsInStock;
+    }
+
+    public ArrayList<Accessory> getAccessoriesInStock() {
+        return accessoriesInStock;
+    }
+
+    public void setAccessoriesInStock(ArrayList<Accessory> accessoriesInStock) {
+        this.accessoriesInStock = accessoriesInStock;
+    }
 }

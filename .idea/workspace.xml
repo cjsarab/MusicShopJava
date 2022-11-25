@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e15fd3cc-d982-495a-9c6a-20f9faeb1f21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/accessories/Accessory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/behaviours/IBuy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/behaviours/IPlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/behaviours/ISell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/instruments/Instrument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/instruments/woodwind/Flute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/instruments/woodwind/Woodwind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/shop/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PlayTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shop/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +45,7 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PlayTest">
+  <component name="RunManager" selected="JUnit.ShopTest">
     <configuration name="PlayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MusicShop" />
       <option name="PACKAGE_NAME" value="" />
@@ -66,21 +55,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayTest.instrumentCanBePlayed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MusicShop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayTest" />
-      <option name="METHOD_NAME" value="instrumentCanBePlayed" />
+      <option name="MAIN_CLASS_NAME" value="ShopTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopTest.shopHasInstrumentsInStock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicShop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ShopTest" />
+      <option name="METHOD_NAME" value="shopHasInstrumentsInStock" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayTest.instrumentHasFamily" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ShopTest.shopHasName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MusicShop" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlayTest" />
-      <option name="METHOD_NAME" value="instrumentHasFamily" />
+      <option name="MAIN_CLASS_NAME" value="ShopTest" />
+      <option name="METHOD_NAME" value="shopHasName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopTest.shopHasTill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MusicShop" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ShopTest" />
+      <option name="METHOD_NAME" value="shopHasTill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,9 +96,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ShopTest" />
+        <item itemvalue="JUnit.ShopTest.shopHasTill" />
+        <item itemvalue="JUnit.ShopTest.shopHasInstrumentsInStock" />
+        <item itemvalue="JUnit.ShopTest.shopHasName" />
         <item itemvalue="JUnit.PlayTest" />
-        <item itemvalue="JUnit.PlayTest.instrumentCanBePlayed" />
-        <item itemvalue="JUnit.PlayTest.instrumentHasFamily" />
       </list>
     </recent_temporary>
   </component>
