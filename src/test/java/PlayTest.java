@@ -16,6 +16,11 @@ public class PlayTest {
     }
 
     @Test
+    public void instrumentCanBePlayed() {
+        assertEquals("I'm a flute! Pi pi pi!", flute.play());
+    }
+
+    @Test
     public void instrumentHasFamily() {
         assertEquals("Woodwind", flute.getFamily());
     }
