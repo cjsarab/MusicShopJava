@@ -73,16 +73,58 @@ public class ShopTest {
     }
 
     @Test
-    public void shopCanSellInstrumentToCustomer() {
+    public void shopCanSellInstrumentToRichCustomer() {
         ArrayList instrumentsInStock = new ArrayList<Instrument>();
         instrumentsInStock.add(flute);
         shop.setInstrumentsInStock(instrumentsInStock);
+
         ArrayList<Instrument> expectedInstrumentsInStock = new ArrayList<Instrument>();
         expectedInstrumentsInStock.add(flute);
-        shop.sellInstrument(flute);
-        expectedInstrumentsInStock.remove(flute);
-        assertEquals(expectedInstrumentsInStock, shop.getInstrumentsInStock());
 
+        ArrayList<Instrument> expectedOwnedInstruments = new ArrayList<Instrument>();
+        expectedOwnedInstruments.add(flute);
+
+        shop.sellInstrument(flute, customerRich);
+        expectedInstrumentsInStock.remove(flute);
+
+        assertEquals(expectedInstrumentsInStock, shop.getInstrumentsInStock());
+        assertEquals(expectedOwnedInstruments, customerRich.getOwnedInstruments());
+        assertEquals(260.00, customerRich.getMoney(), 0.0);
+        assertEquals(50040.00, shop.getTill(), 0.0);
+    }
+
+    @Test public void shopCantSellInstrumentToPoorCustomer() {
+        ArrayList instrumentsInStock = new ArrayList<Instrument>();
+        instrumentsInStock.add(flute);
+        shop.setInstrumentsInStock(instrumentsInStock);
+
+        ArrayList<Instrument> expectedInstrumentsInStock = new ArrayList<Instrument>();
+        expectedInstrumentsInStock.add(flute);
+
+        ArrayList<Instrument> expectedOwnedInstruments = new ArrayList<Instrument>();
+
+        shop.sellInstrument(flute, customerPoor);
+
+        assertEquals(expectedInstrumentsInStock, shop.getInstrumentsInStock());
+        assertEquals(expectedOwnedInstruments, customerPoor.getOwnedInstruments());
+        assertEquals(5.00, customerPoor.getMoney(), 0.0);
+        assertEquals(50000.00, shop.getTill(), 0.0);
+    }
+
+    @Test public void shopCantSellInstrumentIfNotInStock() {
+        ArrayList instrumentsInStock = new ArrayList<Instrument>();
+        shop.setInstrumentsInStock(instrumentsInStock);
+
+        ArrayList<Instrument> expectedInstrumentsInStock = new ArrayList<Instrument>();
+
+        ArrayList<Instrument> expectedOwnedInstruments = new ArrayList<Instrument>();
+
+        shop.sellInstrument(flute, customerRich);
+
+        assertEquals(expectedInstrumentsInStock, shop.getInstrumentsInStock());
+        assertEquals(expectedOwnedInstruments, customerRich.getOwnedInstruments());
+        assertEquals(300.00, customerRich.getMoney(), 0.0);
+        assertEquals(50000.00, shop.getTill(), 0.0);
     }
 
 }

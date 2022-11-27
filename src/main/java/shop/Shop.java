@@ -3,6 +3,7 @@ package shop;
 import accessories.Accessory;
 import instruments.Instrument;
 import instruments.woodwind.Flute;
+import people.Customer;
 
 import java.util.ArrayList;
 
@@ -61,11 +62,16 @@ public class Shop {
         }
     }
 
-    public void sellInstrument(Instrument instrument) {
-        if (this.instrumentsInStock.contains(instrument)) {
+    public void sellInstrument(Instrument instrument, Customer customer) {
+        double money = customer.getMoney();
+        double price = instrument.getSellPrice();
+        if (money >= price && this.instrumentsInStock.contains(instrument)) {
+            money -= price;
+            customer.setMoney(money);
+            setTill(till + price);
             this.instrumentsInStock.remove(instrument);
+            customer.addInstrument(instrument);
         }
-
     }
 
 }
