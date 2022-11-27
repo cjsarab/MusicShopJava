@@ -2,6 +2,7 @@ package shop;
 
 import accessories.Accessory;
 import instruments.Instrument;
+import instruments.woodwind.Flute;
 
 import java.util.ArrayList;
 
@@ -49,4 +50,22 @@ public class Shop {
     public void setAccessoriesInStock(ArrayList<Accessory> accessoriesInStock) {
         this.accessoriesInStock = accessoriesInStock;
     }
+
+    public void buyInstrument(Instrument instrument) {
+        double till = this.getTill();
+        double price = instrument.getBuyPrice();
+        if (till >= price) {
+            till -= price;
+            this.setTill(till);
+            instrumentsInStock.add(instrument);
+        }
+    }
+
+    public void sellInstrument(Instrument instrument) {
+        if (this.instrumentsInStock.contains(instrument)) {
+            this.instrumentsInStock.remove(instrument);
+        }
+
+    }
+
 }
